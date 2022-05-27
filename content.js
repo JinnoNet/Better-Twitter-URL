@@ -5,6 +5,9 @@ const redirect = function () {
 
 if (location.host == "mobile.twitter.com") {
   redirect();
+} else if (location.pathname.match(/share/) || location.pathname.match(/intent/)) //シェアを機能させるため
+{
+  ;
 } else if (location.search != "") {
   redirect();
 }
